@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Janeiro Portfolio - Building scalable systems & intuitive user experiences.">
-  <title>Janeiro Portfolio | Software Engineer & Designer</title>
+  <meta name="description" content="Juan M Portfolio - Developing with foresight and wisdom">
+  <title>Juan M Portfolio | Software Engineer / Product & Systems Architect</title>
 
   <!-- Google Fonts & Favicon -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <!-- Swiper.js CSS (para carrossel em mobile ou visualização interativa) -->
+  <!-- Swiper.js CSS (para carrossel em mobile ou visualizacao interativa) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
   <!-- CSS Customizado -->
@@ -29,23 +29,30 @@
     <!-- ================= NAVBAR ================= -->
     <header class="header" id="header">
       <div class="brand">
-        <a href="#hero" class="brand-logo">Janeiro Portfolio</a>
+        <a href="#hero" class="brand-logo">Juan M Portfolio</a>
       </div>
 
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Toggle language (EN/PT)">
+          <span class="lang-badge active" id="lang-badge-en">EN</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-badge" id="lang-badge-pt">PT</span>
+        </button>
+
         <a href="#contact" class="btn-resume">
-          <span>Resume PDF</span>
+          <span data-i18n="btn_resume">Resume PDF</span>
           <i class="ri-arrow-right-up-line"></i>
         </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu">
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
           <i class="ri-menu-line"></i>
         </button>
       </div>
@@ -58,23 +65,30 @@
       <div class="hero-profile">
         <div class="profile-header">
           <div class="avatar-container">
-            <img src="assets/images/profile.jpg" alt="Foto de Perfil" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80'">
+            <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80'">
           </div>
           <div class="profile-intro-text">
-            <h1 class="hero-title">Building scalable systems & intuitive user experiences.</h1>
-            <div class="location-badge">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>Brasília, DF</span>
+            <h1 class="hero-title" data-i18n="hero_title">Developing with foresight and wisdom.</h1>
+            <div class="profile-meta-row">
+              <div class="location-badge">
+                <i class="ri-map-pin-2-fill"></i>
+                <span data-i18n="hero_location">Brasília, DF</span>
+              </div>
+              <span class="meta-separator">•</span>
+              <div class="education-badge">
+                <i class="ri-graduation-cap-fill"></i>
+                <span data-i18n="hero_education">Undergrad Student @ UnB</span>
+              </div>
             </div>
             
             <div class="hero-socials">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-btn">
+              <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-btn">
                 <i class="ri-github-fill"></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-btn">
+              <a href="https://www.linkedin.com/in/juan-carlos-5b0b6b270/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-btn">
                 <i class="ri-linkedin-box-fill"></i>
               </a>
-              <a href="#projects" aria-label="Portfólio" class="social-icon-btn">
+              <a href="#projects" aria-label="Portfolio" class="social-icon-btn">
                 <i class="ri-briefcase-4-fill"></i>
               </a>
             </div>
@@ -82,21 +96,21 @@
         </div>
 
         <div class="profile-bio">
-          <p>Olá, sou <strong>[Nome do Profissional]</strong>, Especialista em <strong>[Área de Atuação]</strong>. Vamos conversar!</p>
+          <p data-i18n="hero_bio">I'm <strong>Juan</strong>, I focus on <strong>making applications and solutions</strong>.</p>
         </div>
 
         <div class="profile-contact-list" id="contact">
-          <a href="mailto:nome@email.com" class="contact-item">
+          <a href="mailto:jcmm.esft@gmail.com" class="contact-item">
             <i class="ri-mail-line"></i>
-            <span><strong>Email:</strong> nome@email.com</span>
+            <span><strong>Email:</strong> jcmm.esft@gmail.com</span>
           </a>
-          <a href="tel:+5511999999999" class="contact-item">
+          <a href="tel:+5561984174408" class="contact-item">
             <i class="ri-phone-line"></i>
-            <span><strong>Tel:</strong> (11) 99999-9999</span>
+            <span><strong>Tel:</strong> (61) 55984174408</span>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <a href="https://www.linkedin.com/in/juan-carlos-5b0b6b270/" target="_blank" rel="noopener noreferrer" class="contact-item">
             <i class="ri-linkedin-fill"></i>
-            <span><strong>Linkedin</strong></span>
+            <span><strong>LinkedIn</strong></span>
           </a>
         </div>
       </div>
@@ -105,20 +119,44 @@
       <div class="hero-skills" id="skills">
         <div class="skills-grid">
           
-          <!-- JS -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap js-icon">
-              <i class="devicon-javascript-plain"></i>
-            </div>
-            <span class="skill-label">JavaScript</span>
-          </div>
-
           <!-- Python -->
           <div class="skill-card">
             <div class="skill-icon-wrap python-icon">
               <i class="devicon-python-plain"></i>
             </div>
             <span class="skill-label">Python</span>
+          </div>
+
+          <!-- C -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap c-icon">
+              <i class="devicon-c-plain"></i>
+            </div>
+            <span class="skill-label">C</span>
+          </div>
+
+          <!-- C++ -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap cpp-icon">
+              <i class="devicon-cplusplus-plain"></i>
+            </div>
+            <span class="skill-label">C++</span>
+          </div>
+
+          <!-- JS -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap js-icon">
+              <i class="devicon-javascript-plain"></i>
+            </div>
+            <span class="skill-label">JS</span>
+          </div>
+
+          <!-- TS -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap ts-icon">
+              <i class="devicon-typescript-plain"></i>
+            </div>
+            <span class="skill-label">TS</span>
           </div>
 
           <!-- React -->
@@ -129,20 +167,20 @@
             <span class="skill-label">React</span>
           </div>
 
-          <!-- AWS -->
+          <!-- SQL -->
           <div class="skill-card">
-            <div class="skill-icon-wrap aws-icon">
-              <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            <div class="skill-icon-wrap sql-icon">
+              <i class="ri-database-2-line"></i>
             </div>
-            <span class="skill-label">AWS</span>
+            <span class="skill-label">SQL</span>
           </div>
 
-          <!-- React Native / Vue -->
+          <!-- Firebase -->
           <div class="skill-card">
-            <div class="skill-icon-wrap rn-icon">
-              <i class="ri-reactjs-line"></i>
+            <div class="skill-icon-wrap firebase-icon">
+              <i class="devicon-firebase-plain"></i>
             </div>
-            <span class="skill-label">React</span>
+            <span class="skill-label">Firebase</span>
           </div>
 
           <!-- Docker -->
@@ -153,68 +191,20 @@
             <span class="skill-label">Docker</span>
           </div>
 
-          <!-- SQL -->
+          <!-- Design -->
           <div class="skill-card">
-            <div class="skill-icon-wrap sql-icon">
-              <i class="ri-database-2-line"></i>
-            </div>
-            <span class="skill-label">SQL</span>
-          </div>
-
-          <!-- TypeScript -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap ts-icon">
-              <i class="devicon-typescript-plain"></i>
-            </div>
-            <span class="skill-label">TS</span>
-          </div>
-
-          <!-- Cloud / AWS -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap aws-simple">
-              <i class="ri-cloud-line"></i>
-            </div>
-            <span class="skill-label">AWS</span>
-          </div>
-
-          <!-- Node / Backend -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap node-icon">
-              <i class="devicon-nodejs-plain"></i>
-            </div>
-            <span class="skill-label">Node</span>
-          </div>
-
-          <!-- Java -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap java-icon">
-              <i class="devicon-java-plain"></i>
-            </div>
-            <span class="skill-label">Java</span>
-          </div>
-
-          <!-- Cube / Architecture -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap cube-icon">
+            <div class="skill-icon-wrap design-icon">
               <i class="ri-shapes-line"></i>
             </div>
-            <span class="skill-label">Design</span>
+            <span class="skill-label" data-i18n="skill_design">Design</span>
           </div>
 
-          <!-- PostgreSQL -->
+          <!-- A.I. Development -->
           <div class="skill-card">
-            <div class="skill-icon-wrap postgres-icon">
-              <i class="devicon-postgresql-plain"></i>
+            <div class="skill-icon-wrap ai-icon">
+              <i class="ri-sparkling-2-line"></i>
             </div>
-            <span class="skill-label">SQL</span>
-          </div>
-
-          <!-- PM / Agile -->
-          <div class="skill-card">
-            <div class="skill-icon-wrap pm-icon">
-              <i class="ri-kanban-view"></i>
-            </div>
-            <span class="skill-label">PM</span>
+            <span class="skill-label">A.I. Dev</span>
           </div>
 
         </div>
@@ -225,8 +215,8 @@
     <!-- ================= PROJETOS SECTION ================= -->
     <section class="projects-section" id="projects">
       <div class="section-header-compact">
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <span class="section-subtitle">Clique em qualquer projeto para abrir a pagina com a explicacao completa</span>
+        <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
+        <span class="section-subtitle" data-i18n="projects_subtitle">Click on any project to read the full case study</span>
       </div>
 
       <div class="projects-grid">
@@ -256,7 +246,7 @@
               <h3 class="project-title">DASHBOARD ANALYTICS</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc">Plataforma interativa de metricas em tempo real com visualizacao avancada de dados.</p>
+            <p class="project-desc" data-i18n="proj1_desc">Interactive real-time metrics platform with advanced data visualization.</p>
             <div class="project-tags">
               <span class="mini-tag">React</span>
               <span class="mini-tag">TypeScript</span>
@@ -289,7 +279,7 @@
               <h3 class="project-title">E-COMMERCE STORE</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc">Loja virtual completa com checkout integrado, gateway de pagamento e gestao de estoque.</p>
+            <p class="project-desc" data-i18n="proj2_desc">Full e-commerce platform with seamless checkout, payment integration and inventory management.</p>
             <div class="project-tags">
               <span class="mini-tag">Next.js</span>
               <span class="mini-tag">Node.js</span>
@@ -323,7 +313,7 @@
               <h3 class="project-title">FINANCIAL INSIGHTS</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc">Software de inteligencia financeira e previsao de investimentos com modelos preditivos.</p>
+            <p class="project-desc" data-i18n="proj3_desc">Financial intelligence and portfolio forecasting engine with statistical predictive modeling.</p>
             <div class="project-tags">
               <span class="mini-tag">Python</span>
               <span class="mini-tag">FastAPI</span>
@@ -357,7 +347,7 @@
               <h3 class="project-title">API GATEWAY & AUTH</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc">Microsservico de autenticacao distribuida, rate limiting e roteamento inteligente.</p>
+            <p class="project-desc" data-i18n="proj4_desc">Distributed authentication microservice, rate limiting and smart routing engine.</p>
             <div class="project-tags">
               <span class="mini-tag">Node.js</span>
               <span class="mini-tag">Redis</span>
@@ -391,7 +381,7 @@
               <h3 class="project-title">INFRA AS CODE (TERRAFORM)</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc">Automacao de infraestrutura em nuvem na AWS com Kubernetes gerenciado (EKS) e CI/CD.</p>
+            <p class="project-desc" data-i18n="proj5_desc">AWS Cloud infrastructure automation with managed Kubernetes (EKS) and CI/CD pipelines.</p>
             <div class="project-tags">
               <span class="mini-tag">AWS</span>
               <span class="mini-tag">Terraform</span>
@@ -425,7 +415,7 @@
               <h3 class="project-title">MOBILE SYNC APP</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc">Aplicativo mobile multiplataforma com sincronizacao offline-first e notificacoes push.</p>
+            <p class="project-desc" data-i18n="proj6_desc">Cross-platform mobile application with offline-first local database and push notifications.</p>
             <div class="project-tags">
               <span class="mini-tag">React Native</span>
               <span class="mini-tag">Zustand</span>
@@ -437,7 +427,6 @@
       </div>
     </section>
 
-
     <!-- ================= BOTTOM SECTION: EXPERIENCE & SKILLS/LANGUAGES ================= -->
     <section class="bottom-section">
       
@@ -448,45 +437,36 @@
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4 class="job-title">Job Title</h4>
-              <p class="company-dates">Company - Dates</p>
-              <p class="job-desc">Brief, de developerse e consultado</p>
+              <h4 class="job-title">Software Engineer</h4>
+              <p class="company-dates">Company - 2024 - Present</p>
+              <p class="job-desc" data-i18n="exp_desc1">Building scalable backend systems, robust APIs and modern web interfaces.</p>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4 class="job-title">Job Title</h4>
-              <p class="company-dates">Company - Dates</p>
-              <p class="job-desc">Brief, de developerse e eniosos de professionar</p>
+              <h4 class="job-title">Fullstack Developer</h4>
+              <p class="company-dates">Company - 2023 - 2024</p>
+              <p class="job-desc" data-i18n="exp_desc2">Developed responsive web applications, relational schemas and automated testing suites.</p>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4 class="job-title">Job Title</h4>
-              <p class="company-dates">Company - Dates</p>
-              <p class="job-desc">Brief, de developerse e consultado</p>
+              <h4 class="job-title">Frontend Developer</h4>
+              <p class="company-dates">Company - 2022 - 2023</p>
+              <p class="job-desc" data-i18n="exp_desc3">Engineered interactive client interfaces, performance optimizations and state workflows.</p>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4 class="job-title">Job Title</h4>
-              <p class="company-dates">Company - Dates</p>
-              <p class="job-desc">Brief, de developerse e eniosos de professionar</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4 class="job-title">Job Title</h4>
-              <p class="company-dates">Company - Dates</p>
-              <p class="job-desc">Brief, de developerse e consultado</p>
+              <h4 class="job-title">Undergraduate Researcher</h4>
+              <p class="company-dates">UnB - 2022 - 2023</p>
+              <p class="job-desc" data-i18n="exp_desc4">Scientific research, algorithmic problem solving and software architecture studies.</p>
             </div>
           </div>
 
@@ -498,49 +478,54 @@
         
         <!-- Idiomas -->
         <div class="meta-block">
-          <h3 class="meta-heading">Languages</h3>
+          <h3 class="meta-heading" data-i18n="languages_title">Languages</h3>
           <ul class="meta-list">
             <li>
               <span class="meta-bullet">•</span>
-              <span class="meta-label">Inglês -</span>
-              <span class="pill-badge">Fluente</span>
+              <span class="meta-label" data-i18n="lang_pt">Portuguese -</span>
+              <span class="pill-badge" data-i18n="lang_native">Native</span>
             </li>
             <li>
               <span class="meta-bullet">•</span>
-              <span class="meta-label">Espanhol -</span>
-              <span class="pill-badge">Avançado</span>
+              <span class="meta-label" data-i18n="lang_en">English -</span>
+              <span class="pill-badge" data-i18n="lang_fluent">Fluent</span>
+            </li>
+            <li>
+              <span class="meta-bullet">•</span>
+              <span class="meta-label" data-i18n="lang_es">Spanish -</span>
+              <span class="pill-badge" data-i18n="lang_advanced">Advanced</span>
             </li>
           </ul>
         </div>
 
         <!-- Outras Skills / Certificações -->
         <div class="meta-block">
-          <h3 class="meta-heading">Outras skillas</h3>
+          <h3 class="meta-heading" data-i18n="other_skills_title">Other Skills & Focus</h3>
           <ul class="meta-list">
             <li>
               <span class="meta-bullet">•</span>
-              <span class="meta-label">Certificações PM</span>
-              <span class="pill-badge">Google Cloud</span>
+              <span class="meta-label" data-i18n="cert_title1">Cloud Computing</span>
+              <span class="pill-badge">AWS / GCP</span>
             </li>
             <li>
               <span class="meta-bullet">•</span>
-              <span class="meta-label">Certificações PM</span>
-              <span class="pill-badge">Google Cloud</span>
+              <span class="meta-label" data-i18n="cert_title2">System Architecture</span>
+              <span class="pill-badge">Microservices</span>
             </li>
           </ul>
         </div>
 
         <!-- Footer Integrado -->
         <footer class="footer">
-          <div class="footer-copy">© Janeiro Portfolio</div>
+          <div class="footer-copy">© Juan M Portfolio</div>
           <div class="footer-socials">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i class="ri-github-fill"></i>
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <i class="ri-twitter-x-fill"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/juan-carlos-5b0b6b270/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i class="ri-linkedin-box-fill"></i>
             </a>
           </div>
