@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth',
             block: 'start'
           });
-          // Close mobile menu after clicking
+          // Fechar menu mobile se estiver aberto
           if (window.innerWidth <= 600 && navMenu) {
             navMenu.style.display = 'none';
           }
@@ -37,15 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Quick Copy for Email
-  const emailItem = document.querySelector('a[href^="mailto:"]');
-  if (emailItem) {
-    emailItem.addEventListener('click', (e) => {
-      // Optional: You can copy or let default mailto trigger
-      console.log('Abrindo cliente de e-mail...');
-    });
-  }
-
-  // 4. Console greeting
-  console.log('%c Janeiro Portfolio %c Pronto para deploy no GitHub Pages 🚀', 'background: #3a2c24; color: #faf6f0; font-weight: bold; padding: 4px 8px; border-radius: 4px;', 'color: #3d3128;');
+  // 3. Inicializacao do sistema
+  console.log('Janeiro Portfolio carregado com sucesso.');
 });

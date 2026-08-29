@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mobile Task & Sync App - Estudo de Caso de Projeto">
+  <title>Mobile Task & Sync App | Janeiro Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Remix Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="case-study-container">
+
+    <!-- Barra Superior de Navegacao -->
+    <nav class="nav-back-bar">
+      <a href="../index.html#projects" class="btn-back">
+        <i class="ri-arrow-left-line"></i>
+        <span>Voltar ao Portfolio</span>
+      </a>
+      <span class="brand-logo">Janeiro Portfolio</span>
+    </nav>
+
+    <!-- Header do Estudo de Caso -->
+    <header class="case-study-header">
+      <span class="case-study-category">Mobile & Offline-First</span>
+      <h1 class="case-study-title">Mobile Task & Sync App</h1>
+      <p class="case-study-tagline">
+        Aplicativo movil multiplataforma voltado para produtividade com sincronizacao bidirecional e arquitetura offline-first.
+      </p>
+    </header>
+
+    <!-- Grade de Metadados -->
+    <div class="project-meta-grid">
+      <div class="meta-box">
+        <span class="meta-box-label">Funcao</span>
+        <span class="meta-box-value">Mobile Lead Developer</span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-box-label">Periodo</span>
+        <span class="meta-box-value">3 meses (2024)</span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-box-label">Tipo</span>
+        <span class="meta-box-value">Aplicativo iOS & Android</span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-box-label">Status</span>
+        <span class="meta-box-value">Producao</span>
+      </div>
+    </div>
+
+    <!-- Preview Visual do Projeto -->
+    <div class="case-study-preview">
+      <div class="browser-mockup">
+        <div class="browser-bar">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+          <div class="browser-address">mobile-app-sync.dev</div>
+        </div>
+        <div class="case-study-preview-body">
+          <div class="screen-code" style="padding: 1rem;">
+            <div class="code-editor-lines" style="font-size: 0.8rem;">
+              <span class="code-line kw">export const useTaskStore = create((set) => ({</span>
+              <span class="code-line indent">tasks: [],</span>
+              <span class="code-line indent">syncPending: false,</span>
+              <span class="code-line indent">syncWithCloud: async () => syncDatabase(),</span>
+              <span class="code-line">}));</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteudo Detalhado do Estudo de Caso -->
+    <main class="case-study-content">
+
+      <!-- Secao: Visao Geral -->
+      <section class="case-section">
+        <h2 class="case-section-title">Visao Geral</h2>
+        <p class="case-text">
+          O aplicativo foi criado para profissionais que precisam registrar informacoes e gerenciar demandas mesmo em locais sem conectividade com a internet. O app permite criacao, edicao e organizacao completa em modo offline com sincronizacao silenciosa em segundo plano.
+        </p>
+      </section>
+
+      <!-- Secao: O Desafio -->
+      <section class="case-section">
+        <h2 class="case-section-title">O Desafio</h2>
+        <p class="case-text">
+          Tratar resolucao de conflitos de versao entre alteracoes feitas no dispositivo e dados atualizados no servidor central sem exigir intervencoes manuais complexas do usuario.
+        </p>
+      </section>
+
+      <!-- Secao: A Solucao e Arquitetura -->
+      <section class="case-section">
+        <h2 class="case-section-title">A Solucao</h2>
+        <p class="case-text">
+          Adocao do React Native com TypeScript e banco de dados SQLite local embarcado. Foi implementado o padrao CRDT (Conflict-Free Replicated Data Types) aliado a filas de eventos persistentes para sincronizacao assincrona confiavel.
+        </p>
+      </section>
+
+      <!-- Secao: Tecnologias Utilizadas -->
+      <section class="case-section">
+        <h2 class="case-section-title">Tecnologias Utilizadas</h2>
+        <div class="tech-badges-grid">
+          <span class="tech-badge">React Native</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Expo</span>
+          <span class="tech-badge">SQLite Local</span>
+          <span class="tech-badge">Zustand</span>
+          <span class="tech-badge">Firebase Push</span>
+        </div>
+      </section>
+
+      <!-- Secao: Principais Recursos -->
+      <section class="case-section">
+        <h2 class="case-section-title">Principais Recursos</h2>
+        <ul class="case-features-list">
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Funcionamento integral sem internet com persistencia local em SQLite.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Animacoes nativas fluidas a 120Hz com React Native Reanimated.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Notificacoes push inteligentes agendadas no proprio dispositivo.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Modo escuro e claro com deteccao automatica do sistema operacional.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Botoes de Acao -->
+      <div class="case-actions-bar">
+        <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-primary-action">
+          <i class="ri-external-link-line"></i>
+          <span>Ver na App Store / Play Store</span>
+        </a>
+        <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-secondary-action">
+          <i class="ri-github-line"></i>
+          <span>Ver Codigo no GitHub</span>
+        </a>
+      </div>
+
+      <!-- Navegacao entre Projetos -->
+      <nav class="project-pagination-nav">
+        <a href="cloud-infra.html" class="pagination-link">
+          <i class="ri-arrow-left-s-line"></i>
+          <span>Anterior: Cloud Infra (Terraform)</span>
+        </a>
+        <a href="dashboard-analytics.html" class="pagination-link">
+          <span>Proximo: Dashboard Analytics</span>
+          <i class="ri-arrow-right-s-line"></i>
+        </a>
+      </nav>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="align-items: center;">
+      <div class="footer-copy">© Janeiro Portfolio</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

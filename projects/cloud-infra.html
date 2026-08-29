@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cloud Infrastructure as Code - Estudo de Caso de Projeto">
+  <title>Cloud Infrastructure as Code | Janeiro Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Remix Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="case-study-container">
+
+    <!-- Barra Superior de Navegacao -->
+    <nav class="nav-back-bar">
+      <a href="../index.html#projects" class="btn-back">
+        <i class="ri-arrow-left-line"></i>
+        <span>Voltar ao Portfolio</span>
+      </a>
+      <span class="brand-logo">Janeiro Portfolio</span>
+    </nav>
+
+    <!-- Header do Estudo de Caso -->
+    <header class="case-study-header">
+      <span class="case-study-category">DevOps & Cloud</span>
+      <h1 class="case-study-title">Cloud Infrastructure as Code</h1>
+      <p class="case-study-tagline">
+        Automacao completa de infraestrutura em nuvem na AWS com Terraform, clusters Kubernetes gerenciados (EKS) e CI/CD.
+      </p>
+    </header>
+
+    <!-- Grade de Metadados -->
+    <div class="project-meta-grid">
+      <div class="meta-box">
+        <span class="meta-box-label">Funcao</span>
+        <span class="meta-box-value">DevOps & Cloud Architect</span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-box-label">Periodo</span>
+        <span class="meta-box-value">3 meses (2024)</span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-box-label">Tipo</span>
+        <span class="meta-box-value">Infraestrutura em Nuvem</span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-box-label">Status</span>
+        <span class="meta-box-value">Producao</span>
+      </div>
+    </div>
+
+    <!-- Preview Visual do Projeto -->
+    <div class="case-study-preview">
+      <div class="browser-mockup">
+        <div class="browser-bar">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+          <div class="browser-address">cloud-infra.tf</div>
+        </div>
+        <div class="case-study-preview-body">
+          <div class="screen-code" style="padding: 1rem;">
+            <div class="code-editor-lines" style="font-size: 0.8rem;">
+              <span class="code-line kw">resource "aws_eks_cluster" "main" {</span>
+              <span class="code-line indent">name     = "production-cluster"</span>
+              <span class="code-line indent">role_arn = aws_iam_role.cluster.arn</span>
+              <span class="code-line indent">version  = "1.29"</span>
+              <span class="code-line">}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteudo Detalhado do Estudo de Caso -->
+    <main class="case-study-content">
+
+      <!-- Secao: Visao Geral -->
+      <section class="case-section">
+        <h2 class="case-section-title">Visao Geral</h2>
+        <p class="case-text">
+          Projeto estruturado para eliminar processos manuais de configuracao de servidores e recursos de nuvem. Toda a topologia de rede, bancos de dados, clusters de computacao e politicas de seguranca sao definidos em codigo declarativo e versionados.
+        </p>
+      </section>
+
+      <!-- Secao: O Desafio -->
+      <section class="case-section">
+        <h2 class="case-section-title">O Desafio</h2>
+        <p class="case-text">
+          Garantir paridade exata entre os ambientes de Desenvolvimento, Homologacao e Producao, reduzindo os custos operacionais com recursos ociosos e mitigando falhas humanas durante publicacoes de novas versoes.
+        </p>
+      </section>
+
+      <!-- Secao: A Solucao e Arquitetura -->
+      <section class="case-section">
+        <h2 class="case-section-title">A Solucao</h2>
+        <p class="case-text">
+          Criacao de modulos reutilizaveis em Terraform integrados com o GitHub Actions para execucao automatica de rotinas de validacao (*terraform plan*) e aplicacao (*terraform apply*) via pipelines auditaveis. Foi configurado auto-scaling de pods (HPA) no Kubernetes EKS.
+        </p>
+      </section>
+
+      <!-- Secao: Tecnologias Utilizadas -->
+      <section class="case-section">
+        <h2 class="case-section-title">Tecnologias Utilizadas</h2>
+        <div class="tech-badges-grid">
+          <span class="tech-badge">Amazon Web Services (AWS)</span>
+          <span class="tech-badge">Terraform</span>
+          <span class="tech-badge">Kubernetes (EKS)</span>
+          <span class="tech-badge">GitHub Actions</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Prometheus & Grafana</span>
+        </div>
+      </section>
+
+      <!-- Secao: Principais Recursos -->
+      <section class="case-section">
+        <h2 class="case-section-title">Principais Recursos</h2>
+        <ul class="case-features-list">
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Provisionamento de VPC com sub-redes publicas e privadas isoladas.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Politicas de seguranca com principio de menor privilegio via AWS IAM.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Monitoramento proativo de custos e utilizacao de instancias Spot para economia de ate 60%.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Deploy continuo automatizado sem indisponibilidade (*Zero Downtime Rolling Updates*).</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Botoes de Acao -->
+      <div class="case-actions-bar">
+        <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-primary-action">
+          <i class="ri-external-link-line"></i>
+          <span>Ver Arquitetura de Nuvem</span>
+        </a>
+        <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-secondary-action">
+          <i class="ri-github-line"></i>
+          <span>Ver Repositorio no GitHub</span>
+        </a>
+      </div>
+
+      <!-- Navegacao entre Projetos -->
+      <nav class="project-pagination-nav">
+        <a href="api-gateway.html" class="pagination-link">
+          <i class="ri-arrow-left-s-line"></i>
+          <span>Anterior: API Gateway & Auth</span>
+        </a>
+        <a href="mobile-sync.html" class="pagination-link">
+          <span>Proximo: Mobile Sync App</span>
+          <i class="ri-arrow-right-s-line"></i>
+        </a>
+      </nav>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="align-items: center;">
+      <div class="footer-copy">© Janeiro Portfolio</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
