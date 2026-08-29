@@ -377,6 +377,8 @@ button {
 .docker-icon { color: #0284c7; }
 .design-icon { color: #ec4899; }
 .ai-icon { color: #7c3aed; }
+.scrum-icon { color: #0284c7; }
+.agile-icon { color: #10b981; }
 
 /* ==========================================================================
    3. PROJETOS SECTION (MOCKUP CARDS GRID)
@@ -387,8 +389,8 @@ button {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -649,6 +651,34 @@ button {
   margin-top: 0.2rem;
 }
 
+/* Tags Agrupadas por Categoria (Tecnologia / Aprendizado) */
+.project-tags-grouped {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.tag-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag-group-icon {
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
 .mini-tag {
   font-size: 0.68rem;
   font-weight: 600;
@@ -657,6 +687,12 @@ button {
   padding: 0.15rem 0.45rem;
   border-radius: 4px;
   border: 1px solid rgba(58, 44, 36, 0.06);
+}
+
+.mini-tag.tag-learning {
+  background-color: rgba(180, 83, 9, 0.1);
+  color: #92400e;
+  border-color: rgba(180, 83, 9, 0.2);
 }
 
 /* ==========================================================================

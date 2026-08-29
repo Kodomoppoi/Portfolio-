@@ -193,6 +193,22 @@
             <span class="skill-label">Agents</span>
           </div>
 
+          <!-- Scrum -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap scrum-icon">
+              <i class="ri-loop-right-line"></i>
+            </div>
+            <span class="skill-label">Scrum</span>
+          </div>
+
+          <!-- Agile -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap agile-icon">
+              <i class="ri-team-line"></i>
+            </div>
+            <span class="skill-label">Agile</span>
+          </div>
+
         </div>
       </div>
 
@@ -207,8 +223,77 @@
 
       <div class="projects-grid">
 
-        <!-- Projeto 1 -->
-        <a href="projects/dashboard-analytics.html" class="project-card">
+        <!-- Projeto 1: Real Estate Scraper -->
+        <a href="projects/real-estate-scraper.html" class="project-card">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <span class="browser-dot dot-red"></span>
+              <span class="browser-dot dot-yellow"></span>
+              <span class="browser-dot dot-green"></span>
+              <div class="browser-address">scraper.realestate.py</div>
+            </div>
+            <div class="browser-content">
+              <div class="mockup-screen screen-code">
+                <div class="code-editor-lines">
+                  <span class="code-line kw">import asyncio, pandas as pd</span>
+                  <span class="code-line fn">async def scrape_properties(url):</span>
+                  <span class="code-line indent">data = await fetch_listings(url)</span>
+                  <span class="code-line indent">return pd.DataFrame(data)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title-row">
+              <h3 class="project-title">REAL ESTATE SCRAPER</h3>
+              <i class="ri-arrow-right-up-line project-expand-icon"></i>
+            </div>
+            <p class="project-desc" data-i18n="proj1_desc">Automated property data extraction, cleaning and analytical processing pipeline.</p>
+            <div class="project-tags">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">Playwright</span>
+              <span class="mini-tag">Pandas</span>
+              <span class="mini-tag">SQL</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Projeto 2: Web Portfolio -->
+        <a href="projects/web-portfolio.html" class="project-card">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <span class="browser-dot dot-red"></span>
+              <span class="browser-dot dot-yellow"></span>
+              <span class="browser-dot dot-green"></span>
+              <div class="browser-address">portfolio.juanm.dev</div>
+            </div>
+            <div class="browser-content">
+              <div class="mockup-screen screen-2">
+                <div class="mockup-cards-row">
+                  <div class="mock-card"></div>
+                  <div class="mock-card center"></div>
+                  <div class="mock-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title-row">
+              <h3 class="project-title">WEB PORTFOLIO</h3>
+              <i class="ri-arrow-right-up-line project-expand-icon"></i>
+            </div>
+            <p class="project-desc" data-i18n="proj2_desc">Modern editorial portfolio with lightweight client-side bilingual internationalization.</p>
+            <div class="project-tags">
+              <span class="mini-tag">HTML5</span>
+              <span class="mini-tag">CSS3</span>
+              <span class="mini-tag">JavaScript</span>
+              <span class="mini-tag">i18n</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Projeto 3: Vai pela Sombra -->
+        <a href="projects/Vai-pela-Sombra.html" class="project-card">
           <div class="browser-mockup">
             <div class="browser-bar">
               <span class="browser-dot dot-red"></span>
@@ -232,45 +317,26 @@
               <h3 class="project-title">VAI PELA SOMBRA</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc" data-i18n="proj1_desc">Smart travel app simulation and optimized tourism itinerary planning.</p>
-            <div class="project-tags">
-              <span class="mini-tag">TypeScript</span>
-              <span class="mini-tag">Node.js</span>
-              <span class="mini-tag">React</span>
-              <span class="mini-tag">Docker</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Projeto 2 -->
-        <a href="projects/ecommerce-store.html" class="project-card">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="browser-dot dot-red"></span>
-              <span class="browser-dot dot-yellow"></span>
-              <span class="browser-dot dot-green"></span>
-              <div class="browser-address">e-commerce-system.io</div>
-            </div>
-            <div class="browser-content">
-              <div class="mockup-screen screen-2">
-                <div class="mockup-cards-row">
-                  <div class="mock-card"></div>
-                  <div class="mock-card center"></div>
-                  <div class="mock-card"></div>
+            <p class="project-desc" data-i18n="proj3_desc">Smart travel app simulation and optimized tourism itinerary planning.</p>
+            <div class="project-tags-grouped">
+              <div class="tag-group" title="Tecnologias">
+                <i class="ri-atom-line tag-group-icon"></i>
+                <div class="tag-list">
+                  <span class="mini-tag">TypeScript</span>
+                  <span class="mini-tag">React</span>
+                  <span class="mini-tag">Node.js</span>
+                  <span class="mini-tag">Docker</span>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-title-row">
-              <h3 class="project-title">E-COMMERCE STORE</h3>
-              <i class="ri-arrow-right-up-line project-expand-icon"></i>
-            </div>
-            <p class="project-desc" data-i18n="proj2_desc">Full e-commerce platform with seamless checkout, payment integration and inventory management.</p>
-            <div class="project-tags">
-              <span class="mini-tag">Next.js</span>
-              <span class="mini-tag">Node.js</span>
-              <span class="mini-tag">PostgreSQL</span>
+              <div class="tag-group" title="Metodologias e Aprendizado">
+                <i class="ri-graduation-cap-line tag-group-icon"></i>
+                <div class="tag-list">
+                  <span class="mini-tag tag-learning">Scrum</span>
+                  <span class="mini-tag tag-learning">Agile</span>
+                  <span class="mini-tag tag-learning" data-i18n="tag_teamwork">Teamwork</span>
+                  <span class="mini-tag tag-learning">Lean Inception</span>
+                </div>
+              </div>
             </div>
           </div>
         </a>
