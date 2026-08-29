@@ -1,11 +1,59 @@
-/* Variáveis de Tema (Cores, Fontes e Espaçamentos) */
+/* ==========================================================================
+   THEME DESIGN SYSTEM - Janeiro Portfolio (Warm Beige / Editorial Aesthetic)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root {
-  --primary: #6366f1;
-  --primary-hover: #4f46e5;
-  --bg-dark: #0f172a;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --font-family: 'Inter', sans-serif;
+  /* Paleta de Cores Quentes & Editoriais */
+  --bg-main: #ecdccb;
+  --bg-secondary: #f4e8dc;
+  --bg-card: #e4d3c1;
+  --bg-card-hover: #dbcaa8;
+  --bg-card-subtle: #ebdcca;
+  
+  /* Cores de Texto */
+  --text-title: #2b211a;
+  --text-main: #3d3128;
+  --text-muted: #6f5f53;
+  --text-light: #8a786c;
+  
+  /* Acentos & Elementos Escuros */
+  --accent-dark: #3a2c24;
+  --accent-dark-hover: #221812;
+  --accent-dark-text: #faf6f0;
+  
+  /* Badges & Pills */
+  --pill-bg: #d3bea8;
+  --pill-bg-hover: #c5ae96;
+  --pill-text: #2a2019;
+  --pill-border: rgba(43, 33, 26, 0.08);
+
+  /* Molduras & Bordas */
+  --border-subtle: rgba(58, 44, 36, 0.12);
+  --border-strong: rgba(58, 44, 36, 0.22);
+  --timeline-line: rgba(58, 44, 36, 0.25);
+  --timeline-dot: #3a2c24;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 5px rgba(50, 35, 25, 0.05);
+  --shadow-md: 0 4px 14px rgba(50, 35, 25, 0.08);
+  --shadow-lg: 0 10px 25px rgba(50, 35, 25, 0.12);
+  --shadow-card: 0 4px 12px rgba(60, 45, 35, 0.06);
+
+  /* Tipografia */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  /* Raios de Arredondamento */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Transições */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
