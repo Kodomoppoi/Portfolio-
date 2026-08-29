@@ -32,14 +32,6 @@
         <a href="#hero" class="brand-logo">Juan M Portfolio</a>
       </div>
 
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
-          <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
-          <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
-        </ul>
-      </nav>
-
       <div class="nav-actions">
         <!-- Language Switcher Button -->
         <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Toggle language (EN/PT)">
@@ -52,9 +44,6 @@
           <span data-i18n="btn_resume">Resume PDF</span>
           <i class="ri-arrow-right-up-line"></i>
         </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
-          <i class="ri-menu-line"></i>
-        </button>
       </div>
     </header>
 
@@ -196,12 +185,12 @@
             <span class="skill-label" data-i18n="skill_design">Design</span>
           </div>
 
-          <!-- A.I. Development -->
+          <!-- Agents -->
           <div class="skill-card">
             <div class="skill-icon-wrap ai-icon">
               <i class="ri-sparkling-2-line"></i>
             </div>
-            <span class="skill-label">A.I. Dev</span>
+            <span class="skill-label">Agents</span>
           </div>
 
         </div>
@@ -281,142 +270,6 @@
               <span class="mini-tag">Next.js</span>
               <span class="mini-tag">Node.js</span>
               <span class="mini-tag">PostgreSQL</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Projeto 3 -->
-        <a href="projects/financial-insights.html" class="project-card">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="browser-dot dot-red"></span>
-              <span class="browser-dot dot-yellow"></span>
-              <span class="browser-dot dot-green"></span>
-              <div class="browser-address">analytics-platform.cloud</div>
-            </div>
-            <div class="browser-content">
-              <div class="mockup-screen screen-3">
-                <div class="mockup-chart-header">
-                  <div class="circle-badge"></div>
-                  <div class="circle-badge"></div>
-                  <div class="circle-badge"></div>
-                </div>
-                <div class="mockup-chart-line"></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-title-row">
-              <h3 class="project-title">FINANCIAL INSIGHTS</h3>
-              <i class="ri-arrow-right-up-line project-expand-icon"></i>
-            </div>
-            <p class="project-desc" data-i18n="proj3_desc">Financial intelligence and portfolio forecasting engine with statistical predictive modeling.</p>
-            <div class="project-tags">
-              <span class="mini-tag">Python</span>
-              <span class="mini-tag">FastAPI</span>
-              <span class="mini-tag">Chart.js</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Projeto 4 -->
-        <a href="projects/api-gateway.html" class="project-card">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="browser-dot dot-red"></span>
-              <span class="browser-dot dot-yellow"></span>
-              <span class="browser-dot dot-green"></span>
-              <div class="browser-address">api-gateway-service.io</div>
-            </div>
-            <div class="browser-content">
-              <div class="mockup-screen screen-code">
-                <div class="code-editor-lines">
-                  <span class="code-line kw">import { createServer } from 'node:http';</span>
-                  <span class="code-line fn">const server = createServer((req, res) => {</span>
-                  <span class="code-line indent">res.writeHead(200, { 'Content-Type': 'json' });</span>
-                  <span class="code-line">});</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-title-row">
-              <h3 class="project-title">API GATEWAY & AUTH</h3>
-              <i class="ri-arrow-right-up-line project-expand-icon"></i>
-            </div>
-            <p class="project-desc" data-i18n="proj4_desc">Distributed authentication microservice, rate limiting and smart routing engine.</p>
-            <div class="project-tags">
-              <span class="mini-tag">Node.js</span>
-              <span class="mini-tag">Redis</span>
-              <span class="mini-tag">Docker</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Projeto 5 -->
-        <a href="projects/cloud-infra.html" class="project-card">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="browser-dot dot-red"></span>
-              <span class="browser-dot dot-yellow"></span>
-              <span class="browser-dot dot-green"></span>
-              <div class="browser-address">cloud-infra.tf</div>
-            </div>
-            <div class="browser-content">
-              <div class="mockup-screen screen-code">
-                <div class="code-editor-lines">
-                  <span class="code-line kw">resource "aws_eks_cluster" "main" {</span>
-                  <span class="code-line indent">name     = "production-cluster"</span>
-                  <span class="code-line indent">role_arn = aws_iam_role.cluster.arn</span>
-                  <span class="code-line">}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-title-row">
-              <h3 class="project-title">INFRA AS CODE (TERRAFORM)</h3>
-              <i class="ri-arrow-right-up-line project-expand-icon"></i>
-            </div>
-            <p class="project-desc" data-i18n="proj5_desc">AWS Cloud infrastructure automation with managed Kubernetes (EKS) and CI/CD pipelines.</p>
-            <div class="project-tags">
-              <span class="mini-tag">AWS</span>
-              <span class="mini-tag">Terraform</span>
-              <span class="mini-tag">K8s</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Projeto 6 -->
-        <a href="projects/mobile-sync.html" class="project-card">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="browser-dot dot-red"></span>
-              <span class="browser-dot dot-yellow"></span>
-              <span class="browser-dot dot-green"></span>
-              <div class="browser-address">mobile-app-sync.dev</div>
-            </div>
-            <div class="browser-content">
-              <div class="mockup-screen screen-code">
-                <div class="code-editor-lines">
-                  <span class="code-line kw">export const useSessionStore = create((set) => ({</span>
-                  <span class="code-line indent">user: null,</span>
-                  <span class="code-line indent">isAuthenticated: true,</span>
-                  <span class="code-line">}));</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-title-row">
-              <h3 class="project-title">MOBILE SYNC APP</h3>
-              <i class="ri-arrow-right-up-line project-expand-icon"></i>
-            </div>
-            <p class="project-desc" data-i18n="proj6_desc">Cross-platform mobile application with offline-first local database and push notifications.</p>
-            <div class="project-tags">
-              <span class="mini-tag">React Native</span>
-              <span class="mini-tag">Zustand</span>
-              <span class="mini-tag">SQLite</span>
             </div>
           </div>
         </a>
