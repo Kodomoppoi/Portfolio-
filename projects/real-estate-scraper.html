@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Real Estate Scraper - Pipeline de extracao de dados imobiliarios">
-  <title>Real Estate Scraper | Juan M Portfolio</title>
+  <meta name="description" content="Real Estate Scraper & AI Extractor - Pipeline inteligente de extracao de dados imobiliarios">
+  <title>Real Estate Scraper & AI Extractor | Juan M Portfolio</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,84 +21,119 @@
 
   <div class="case-study-container">
 
-    <!-- Barra Superior de Navegacao -->
+    <!-- Barra Superior de Navegacao com Seletor de Idioma -->
     <nav class="nav-back-bar">
       <a href="../index.html#projects" class="btn-back">
         <i class="ri-arrow-left-line"></i>
-        <span>Voltar ao Portfolio</span>
+        <span data-i18n="back_to_portfolio">Voltar ao Portfolio</span>
       </a>
       <span class="brand-logo">Juan M Portfolio</span>
+
+      <!-- Language Switcher Button -->
+      <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Toggle language (EN/PT)">
+        <span class="lang-badge active" id="lang-badge-en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-badge" id="lang-badge-pt">PT</span>
+      </button>
     </nav>
 
     <!-- Header do Estudo de Caso -->
     <header class="case-study-header">
-      <span class="case-study-category">Python / Data Scraping & Automation</span>
-      <h1 class="case-study-title">Real Estate Scraper</h1>
-      <p class="case-study-tagline">
-        Pipeline automatizado de extracao, estruturacao e analise de dados imobiliarios.
+      <span class="case-study-category" data-i18n="res_category">Python / AI Extraction & Streamlit Dashboard</span>
+      <h1 class="case-study-title">Real Estate Scraper & AI Extractor</h1>
+      <p class="case-study-tagline" data-i18n="res_tagline">
+        Pipeline inteligente de descoberta de imóveis, rastreamento de portais e extração semântica com IA e Pydantic.
       </p>
     </header>
 
     <!-- Grade de Metadados -->
     <div class="project-meta-grid">
       <div class="meta-box">
-        <span class="meta-box-label">Funcao</span>
-        <span class="meta-box-value">Developer</span>
+        <span class="meta-box-label" data-i18n="meta_role_label">Funcao</span>
+        <span class="meta-box-value" data-i18n="res_role_val">Developer & AI Architect</span>
       </div>
       <div class="meta-box">
-        <span class="meta-box-label">Periodo</span>
+        <span class="meta-box-label" data-i18n="meta_period_label">Periodo</span>
         <span class="meta-box-value">2025</span>
       </div>
       <div class="meta-box">
-        <span class="meta-box-label">Tipo</span>
-        <span class="meta-box-value">Automacao & Dados</span>
+        <span class="meta-box-label" data-i18n="meta_type_label">Tipo</span>
+        <span class="meta-box-value" data-i18n="res_type_val">Open Source / IA & Dados</span>
       </div>
       <div class="meta-box">
-        <span class="meta-box-label">Status</span>
-        <span class="meta-box-value">Pronto</span>
+        <span class="meta-box-label" data-i18n="meta_status_label">Status</span>
+        <span class="meta-box-value" data-i18n="res_status_val">v1.0.0 (Pronto)</span>
       </div>
     </div>
 
     <!-- Conteudo Detalhado do Estudo de Caso -->
     <main class="case-study-content">
 
+      <!-- Secao: Sobre o Projeto -->
+      <section class="case-section">
+        <h2 class="case-section-title">
+          <i class="ri-lightbulb-line"></i>
+          <span data-i18n="res_about_title">Sobre o Projeto</span>
+        </h2>
+        <p class="case-text" data-i18n="res_about_p1">
+          Scrapers tradicionais dependem de seletores CSS/XPath frágeis que quebram facilmente com mudanças de layout. Este projeto resolve esse problema utilizando um pipeline semântico com modelos de linguagem (LLMs) e validação estruturada com Pydantic, permitindo extrair dados imobiliários padronizados de qualquer portal do mundo sem necessidade de criar scrapers específicos para cada site.
+        </p>
+      </section>
+
       <!-- Secao: Tecnologias Utilizadas -->
       <section class="case-section">
-        <h2 class="case-section-title">Tecnologias Utilizadas</h2>
+        <h2 class="case-section-title">
+          <i class="ri-atom-line"></i>
+          <span data-i18n="res_tech_title">Tecnologias Utilizadas</span>
+        </h2>
         <div class="tech-badges-grid">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">BeautifulSoup</span>
+          <span class="tech-badge">Python 3.10+</span>
+          <span class="tech-badge">Google Gemini API</span>
+          <span class="tech-badge">Groq Cloud</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">Pydantic</span>
           <span class="tech-badge">Playwright</span>
+          <span class="tech-badge">BeautifulSoup4</span>
           <span class="tech-badge">Pandas</span>
-          <span class="tech-badge">SQL</span>
-          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">DuckDuckGo Search</span>
         </div>
       </section>
 
-      <!-- Secao: Aprendizado -->
+      <!-- Secao: Aprendizado & Arquitetura -->
       <section class="case-section">
-        <h2 class="case-section-title">Aprendizado</h2>
+        <h2 class="case-section-title">
+          <i class="ri-cpu-line"></i>
+          <span data-i18n="res_arch_title">Arquitetura & Aprendizado</span>
+        </h2>
         <ul class="case-features-list">
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span>Desenvolvimento de rotinas avancadas de raspagem web com tratamento de paginacao dinamica e renderizacao JavaScript.</span>
+            <span data-i18n="res_arch_item1">Descoberta autônoma de portais imobiliários via DuckDuckGo com pré-curadoria e filtragem por IA.</span>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span>Estruturacao, limpeza e normalizacao de grandes volumes de dados imobiliarios para analise estatistica e persistencia.</span>
+            <span data-i18n="res_arch_item2">Algoritmo de condensação de tokens do DOM com redução de cerca de 75% de ruído, otimizando custos e limites de TPM de IA.</span>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span>Construcao de arquitetura com tolerancia a falhas, controle de taxa de requisicoes (rate-limiting) e logs detalhados.</span>
+            <span data-i18n="res_arch_item3">Extração estruturada de tipologias, valores, suítes, comodidades e condições de financiamento com validação Pydantic.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span data-i18n="res_arch_item4">Interface analítica interativa com Streamlit para exploração em tempo real, deduplicação de anúncios e exportação CSV/JSON.</span>
           </li>
         </ul>
       </section>
 
-      <!-- Botao de Acao (Link para o Repositorio no Fundo) -->
+      <!-- Botoes de Acao -->
       <div class="case-actions-bar">
-        <a href="https://github.com/Kodomoppoi" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-primary-action">
+        <a href="https://github.com/Kodomoppoi/Real-estate-Scrapper" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-primary-action">
           <i class="ri-github-line"></i>
-          <span>Acessar Repositorio do Projeto no GitHub</span>
+          <span data-i18n="res_btn_repo">Acessar Repositorio no GitHub</span>
+        </a>
+        <a href="https://youtu.be/xcjRcRTZt-I?si=thM-5ZTkQCM7sZmI" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-secondary-action">
+          <i class="ri-video-line"></i>
+          <span data-i18n="res_btn_video">Video Showcase (YouTube)</span>
         </a>
       </div>
 
@@ -106,10 +141,10 @@
       <nav class="project-pagination-nav">
         <a href="../index.html#projects" class="pagination-link">
           <i class="ri-arrow-left-s-line"></i>
-          <span>Voltar ao Portfolio</span>
+          <span data-i18n="back_to_portfolio">Voltar ao Portfolio</span>
         </a>
         <a href="web-portfolio.html" class="pagination-link">
-          <span>Proximo: Web Portfolio</span>
+          <span data-i18n="res_next_project">Proximo: Web Portfolio</span>
           <i class="ri-arrow-right-s-line"></i>
         </a>
       </nav>
@@ -123,5 +158,7 @@
 
   </div>
 
+  <!-- Scripts para Alternancia de Idioma e Interatividade -->
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

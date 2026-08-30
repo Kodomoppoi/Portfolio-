@@ -209,6 +209,14 @@
             <span class="skill-label">Agile</span>
           </div>
 
+          <!-- Token Economy -->
+          <div class="skill-card">
+            <div class="skill-icon-wrap token-economy-icon">
+              <i class="ri-copper-coin-line"></i>
+            </div>
+            <span class="skill-label">Token Economy</span>
+          </div>
+
         </div>
       </div>
 
@@ -235,10 +243,9 @@
             <div class="browser-content">
               <div class="mockup-screen screen-code">
                 <div class="code-editor-lines">
-                  <span class="code-line kw">import asyncio, pandas as pd</span>
-                  <span class="code-line fn">async def scrape_properties(url):</span>
-                  <span class="code-line indent">data = await fetch_listings(url)</span>
-                  <span class="code-line indent">return pd.DataFrame(data)</span>
+                  <span class="code-line kw">import asyncio, pydantic</span>
+                  <span class="code-line fn">async def extract_properties(html):</span>
+                  <span class="code-line indent">return await llm.structured_output(html, schema=Property)</span>
                 </div>
               </div>
             </div>
@@ -248,12 +255,12 @@
               <h3 class="project-title">REAL ESTATE SCRAPER</h3>
               <i class="ri-arrow-right-up-line project-expand-icon"></i>
             </div>
-            <p class="project-desc" data-i18n="proj1_desc">Automated property data extraction, cleaning and analytical processing pipeline.</p>
+            <p class="project-desc" data-i18n="proj1_desc">Intelligent real estate discovery pipeline and semantic AI extraction with Streamlit dashboard.</p>
             <div class="project-tags">
               <span class="mini-tag">Python</span>
-              <span class="mini-tag">Playwright</span>
-              <span class="mini-tag">Pandas</span>
-              <span class="mini-tag">SQL</span>
+              <span class="mini-tag">Gemini AI</span>
+              <span class="mini-tag">Streamlit</span>
+              <span class="mini-tag">Pydantic</span>
             </div>
           </div>
         </a>
