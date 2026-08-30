@@ -99,28 +99,67 @@
         </div>
       </section>
 
-      <!-- Secao: Aprendizado & Arquitetura -->
+      <!-- Secao: Desafios Enfrentados -->
       <section class="case-section">
         <h2 class="case-section-title">
-          <i class="ri-cpu-line"></i>
-          <span data-i18n="res_arch_title">Arquitetura & Aprendizado</span>
+          <i class="ri-alert-line"></i>
+          <span data-i18n="res_challenges_title">Desafios de Engenharia & IA</span>
         </h2>
         <ul class="case-features-list">
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span data-i18n="res_arch_item1">Descoberta autônoma de portais imobiliários via DuckDuckGo com pré-curadoria e filtragem por IA.</span>
+            <div>
+              <strong data-i18n="res_ch1_title">Limites de Taxa e Micro-Batches:</strong>
+              <span data-i18n="res_ch1_desc"> Modelos em camadas gratuitas ou de menor custo (como Groq) impõem limites severos de requisição e TPM (ex: 6.000 TPM). Foi necessário arquitetar processamento em micro-batches com throttling inteligente para não estourar quotas.</span>
+            </div>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span data-i18n="res_arch_item2">Algoritmo de condensação de tokens do DOM com redução de cerca de 75% de ruído, otimizando custos e limites de TPM de IA.</span>
+            <div>
+              <strong data-i18n="res_ch2_title">Condensação de Texto & Economia de Tokens:</strong>
+              <span data-i18n="res_ch2_desc"> O HTML bruto de portais consome dezenas de milhares de tokens desnecessários. Modifiquei o scraper para realizar limpeza prévia do DOM, reduzindo cerca de 75% do ruído antes de enviar o payload para a IA.</span>
+            </div>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span data-i18n="res_arch_item3">Extração estruturada de tipologias, valores, suítes, comodidades e condições de financiamento com validação Pydantic.</span>
+            <div>
+              <strong data-i18n="res_ch3_title">Vícios de Modelos (ex: Módulo &lt;think&gt; do Qwen):</strong>
+              <span data-i18n="res_ch3_desc"> Certos modelos de raciocínio inserem blocos não solicitados de reflexão (&lt;think&gt;) que poluem a resposta. Desenvolvi tratamentos de sanitização para garantir JSONs puros prontos para desserialização.</span>
+            </div>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span data-i18n="res_arch_item4">Interface analítica interativa com Streamlit para exploração em tempo real, deduplicação de anúncios e exportação CSV/JSON.</span>
+            <div>
+              <strong data-i18n="res_ch4_title">Modelos Menores e Necessidade de Ancoragem Rígida:</strong>
+              <span data-i18n="res_ch4_desc"> Modelos mais compactos e baratos tendem a alucinar ou ignorar campos sem constraints severas. Implementei técnicas rigorosas de ancoragem de prompt e validação com Pydantic para manter a integridade dos dados.</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Secao: O que Aprendi -->
+      <section class="case-section">
+        <h2 class="case-section-title">
+          <i class="ri-graduation-cap-line"></i>
+          <span data-i18n="res_learn_title">O que Aprendi</span>
+        </h2>
+        <div class="tech-badges-grid" style="margin-bottom: 1.25rem;">
+          <span class="tech-badge" style="background-color: rgba(180, 83, 9, 0.1); color: #92400e; border-color: rgba(180, 83, 9, 0.25);" data-i18n="res_badge_scraping">Web Scraping Avançado</span>
+          <span class="tech-badge" style="background-color: rgba(180, 83, 9, 0.1); color: #92400e; border-color: rgba(180, 83, 9, 0.25);">Token Economy</span>
+          <span class="tech-badge" style="background-color: rgba(180, 83, 9, 0.1); color: #92400e; border-color: rgba(180, 83, 9, 0.25);" data-i18n="res_badge_ai_arch">Orquestração & Comandos de IA</span>
+        </div>
+        <ul class="case-features-list">
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span data-i18n="res_learn_item1">Construção de rotinas de extração robustas focadas em pré-processamento eficiente e tratamento de sites dinâmicos com Playwright.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span data-i18n="res_learn_item2">Domínio prático de Token Economy: cálculo de orçamentos de contexto, redução de custos de inferência e gestão de rate-limits.</span>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span data-i18n="res_learn_item3">Arquitetar e comandar fluxos de IA controlados, combinando ancoragem de prompts, esquemas estruturados e tolerância a falhas.</span>
           </li>
         </ul>
       </section>
