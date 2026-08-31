@@ -69,6 +69,51 @@
     <!-- Conteudo Detalhado do Estudo de Caso -->
     <main class="case-study-content">
 
+      <!-- Secao: Origem & Filosofia do Design -->
+      <section class="case-section">
+        <h2 class="case-section-title">
+          <i class="ri-palette-line"></i>
+          <span data-i18n="wp_origin_title">Origem & Filosofia do Design</span>
+        </h2>
+        <p class="case-text" data-i18n="wp_origin_p1">
+          Desenvolvi este portfólio com o objetivo de criar uma presença digital autêntica, minimalista e de alta performance. Em vez de recorrer a frameworks pesados com sobrecarga de renderização para páginas estáticas, optei por construir uma experiência puramente artesanal em HTML5, CSS3 e JavaScript Vanilla.
+        </p>
+        <p class="case-text" style="margin-top: 0.75rem;" data-i18n="wp_origin_p2">
+          A direção de arte combina a elegância de publicações editoriais com a precisão da engenharia de software: tipografia serifada de alto contraste nos títulos, paleta de tons neutros aconchegantes e componentes interativos inspirados em mini-navegadores e terminais de desenvolvimento.
+        </p>
+      </section>
+
+      <!-- Secao: Arquitetura & Destaques de Engenharia -->
+      <section class="case-section">
+        <h2 class="case-section-title">
+          <i class="ri-layout-masonry-line"></i>
+          <span data-i18n="wp_arch_title">Arquitetura & Destaques Frontend</span>
+        </h2>
+        <ul class="case-features-list">
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong data-i18n="wp_arch_f1_title">Sistema i18n Nativo Client-Side:</strong>
+              <span data-i18n="wp_arch_f1_desc"> Mecanismo de internacionalização instantâneo sem recarregamento de página, operando via mapeamento de chaves data-i18n e persistência da preferência do usuário no localStorage.</span>
+            </div>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong data-i18n="wp_arch_f2_title">Design System com Tokens CSS:</strong>
+              <span data-i18n="wp_arch_f2_desc"> Centralização de variáveis customizadas (cores HSL/Hex, escalas tipográficas, raios de borda e curvas de transição suave) para manter consistência absoluta em todas as páginas.</span>
+            </div>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong data-i18n="wp_arch_f3_title">Layout Responsivo & Acessibilidade:</strong>
+              <span data-i18n="wp_arch_f3_desc"> Estrutura semântica com Flexbox e CSS Grid moderno, proporcionando visualização impecável desde telas ultrawide até dispositivos móveis compactos.</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
       <!-- Secao: Tecnologias Utilizadas -->
       <section class="case-section">
         <h2 class="case-section-title">
@@ -76,8 +121,8 @@
           <span data-i18n="wp_tech_title">Tecnologias Utilizadas</span>
         </h2>
         <div class="tech-badges-grid">
-          <span class="tech-badge">HTML5</span>
-          <span class="tech-badge">CSS3 (Vanilla)</span>
+          <span class="tech-badge">HTML5 Semântico</span>
+          <span class="tech-badge">CSS3 (Vanilla & Tokens)</span>
           <span class="tech-badge">JavaScript (ES6+)</span>
           <span class="tech-badge">i18n Client-Side</span>
           <span class="tech-badge">Remix Icon</span>
@@ -86,12 +131,48 @@
         </div>
       </section>
 
-      <!-- Secao: Aprendizado -->
+      <!-- Secao: Desafios Enfrentados -->
+      <section class="case-section">
+        <h2 class="case-section-title">
+          <i class="ri-alert-line"></i>
+          <span data-i18n="wp_challenges_title">Desafios de Engenharia</span>
+        </h2>
+        <ul class="case-features-list">
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong data-i18n="wp_ch1_title">Prevenção de Layout Shift (CLS):</strong>
+              <span data-i18n="wp_ch1_desc"> Garantir que a alternância entre textos de diferentes comprimentos em inglês e português não cause saltos indesejados ou quebras de alinhamento no grid.</span>
+            </div>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong data-i18n="wp_ch2_title">Modularidade sem Bundlers:</strong>
+              <span data-i18n="wp_ch2_desc"> Manter estilos e lógica organizados e escaláveis em múltiplos arquivos sem depender de bundlers pesados como Webpack ou Vite para o build.</span>
+            </div>
+          </li>
+          <li class="case-feature-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong data-i18n="wp_ch3_title">Micro-interações e Performance:</strong>
+              <span data-i18n="wp_ch3_desc"> Desenvolver animações sutis de hover nos cards, botões e tags preservando pontuação máxima de performance e tempos de carregamento instantâneos.</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Secao: O que Aprendi & Decisões -->
       <section class="case-section">
         <h2 class="case-section-title">
           <i class="ri-graduation-cap-line"></i>
           <span data-i18n="wp_learn_title">Aprendizado & Decisões</span>
         </h2>
+        <div class="tech-badges-grid" style="margin-bottom: 1.25rem;">
+          <span class="tech-badge" style="background-color: rgba(180, 83, 9, 0.1); color: #92400e; border-color: rgba(180, 83, 9, 0.25);" data-i18n="wp_badge_design">UI/UX Design Editorial</span>
+          <span class="tech-badge" style="background-color: rgba(180, 83, 9, 0.1); color: #92400e; border-color: rgba(180, 83, 9, 0.25);" data-i18n="wp_badge_i18n">i18n Client-Side</span>
+          <span class="tech-badge" style="background-color: rgba(180, 83, 9, 0.1); color: #92400e; border-color: rgba(180, 83, 9, 0.25);" data-i18n="wp_badge_css">CSS Architecture</span>
+        </div>
         <ul class="case-features-list">
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
@@ -103,7 +184,7 @@
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
-            <span data-i18n="wp_learn_item3">Otimização de performance, semântica HTML e responsividade multi-dispositivo sem dependência de frameworks pesados.</span>
+            <span data-i18n="wp_learn_item3">Otimização de Core Web Vitals, semântica HTML e responsividade multi-dispositivo sem dependência de frameworks pesados.</span>
           </li>
         </ul>
       </section>
