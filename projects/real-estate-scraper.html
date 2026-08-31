@@ -54,7 +54,7 @@
       </div>
       <div class="meta-box">
         <span class="meta-box-label" data-i18n="meta_period_label">Periodo</span>
-        <span class="meta-box-value">2025</span>
+        <span class="meta-box-value">2026</span>
       </div>
       <div class="meta-box">
         <span class="meta-box-label" data-i18n="meta_type_label">Tipo</span>
@@ -68,6 +68,20 @@
 
     <!-- Conteudo Detalhado do Estudo de Caso -->
     <main class="case-study-content">
+
+      <!-- Secao: Origem do Projeto & Contexto Casual -->
+      <section class="case-section">
+        <h2 class="case-section-title">
+          <i class="ri-user-voice-line"></i>
+          <span data-i18n="res_story_title">Origem do Projeto</span>
+        </h2>
+        <p class="case-text" data-i18n="res_story_p1">
+          Após a aposentadoria do meu pai, minha família passou a procurar casas em diversos sites por horas a fio, deixando o clima em casa um pouco tenso. Diante desse dilema, decidi transformar a adversidade em uma solução prática: criar uma ferramenta de scraping.
+        </p>
+        <p class="case-text" style="margin-top: 0.75rem;" data-i18n="res_story_p2">
+          No projeto, o scraping real é feito com ferramentas dedicadas para gerar os dados brutos, enquanto a IA assume um papel mais dinâmico para estruturar e formatar as informações. O maior desafio acabou sendo justamente a integração da IA, especialmente ao tentar encaixar chaves gratuitas e a preocupação constante com o alto consumo de tokens. Nessa nova era, quem desenvolve sabe como é fácil estourar a quota em uma única requisição ou ter o fluxo travado por limites rígidos de taxa de envio (TPM/RPM).
+        </p>
+      </section>
 
       <!-- Secao: Sobre o Projeto -->
       <section class="case-section">
@@ -88,8 +102,6 @@
         </h2>
         <div class="tech-badges-grid">
           <span class="tech-badge">Python 3.10+</span>
-          <span class="tech-badge">Google Gemini API</span>
-          <span class="tech-badge">Groq Cloud</span>
           <span class="tech-badge">Streamlit</span>
           <span class="tech-badge">Pydantic</span>
           <span class="tech-badge">Playwright</span>
@@ -110,28 +122,28 @@
             <i class="ri-checkbox-circle-fill"></i>
             <div>
               <strong data-i18n="res_ch1_title">Limites de Taxa e Micro-Batches:</strong>
-              <span data-i18n="res_ch1_desc"> Modelos em camadas gratuitas ou de menor custo (como Groq) impõem limites severos de requisição e TPM (ex: 6.000 TPM). Foi necessário arquitetar processamento em micro-batches com throttling inteligente para não estourar quotas.</span>
+              <span data-i18n="res_ch1_desc"> Modelos em camadas gratuitas ou de menor custo impõem limites severos de requisição e TPM (ex: 6.000 TPM). Foi necessário arquitetar processamento em micro-batches com throttling inteligente para não estourar quotas.</span>
             </div>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
             <div>
               <strong data-i18n="res_ch2_title">Condensação de Texto & Economia de Tokens:</strong>
-              <span data-i18n="res_ch2_desc"> O HTML bruto de portais consome dezenas de milhares de tokens desnecessários. Modifiquei o scraper para realizar limpeza prévia do DOM, reduzindo cerca de 75% do ruído antes de enviar o payload para a IA.</span>
+              <span data-i18n="res_ch2_desc"> O HTML bruto de portais consome dezenas de milhares de tokens desnecessários. O scraper precisou ser modificado para realizar limpeza prévia do DOM, reduzindo cerca de 75% do ruído antes de enviar o payload para a IA.</span>
             </div>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
             <div>
               <strong data-i18n="res_ch3_title">Vícios de Modelos (ex: Módulo &lt;think&gt; do Qwen):</strong>
-              <span data-i18n="res_ch3_desc"> Certos modelos de raciocínio inserem blocos não solicitados de reflexão (&lt;think&gt;) que poluem a resposta. Desenvolvi tratamentos de sanitização para garantir JSONs puros prontos para desserialização.</span>
+              <span data-i18n="res_ch3_desc"> Certos modelos de raciocínio inserem blocos não solicitados de reflexão (&lt;think&gt;) que poluem a resposta e dependendo de como o código recebe o output da IA, acaba por quebrar o funcionamento. Foi necessário aplicar tratamentos de sanitização para garantir JSONs puros prontos para desserialização.</span>
             </div>
           </li>
           <li class="case-feature-item">
             <i class="ri-checkbox-circle-fill"></i>
             <div>
               <strong data-i18n="res_ch4_title">Modelos Menores e Necessidade de Ancoragem Rígida:</strong>
-              <span data-i18n="res_ch4_desc"> Modelos mais compactos e baratos tendem a alucinar ou ignorar campos sem constraints severas. Implementei técnicas rigorosas de ancoragem de prompt e validação com Pydantic para manter a integridade dos dados.</span>
+              <span data-i18n="res_ch4_desc"> Modelos mais compactos e baratos tendem a alucinar ou ignorar campos sem constraints severas. Foi necessário aplicar técnicas mais rigorosas de ancoragem de prompt e validação com Pydantic para manter a integridade dos dados.</span>
             </div>
           </li>
         </ul>
