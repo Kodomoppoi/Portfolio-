@@ -220,28 +220,17 @@
 
     <!-- ================= PROJETOS SECTION ================= -->
     <section class="projects-section" id="projects">
-      <div class="section-header-compact section-header-with-controls">
-        <div class="header-text-group">
-          <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
-          <span class="section-subtitle" data-i18n="projects_subtitle">Click on any project to read the full case study</span>
-        </div>
-
-        <!-- Controles do Carrossel -->
-        <div class="carousel-controls">
-          <button class="carousel-nav-btn" id="carousel-prev-btn" aria-label="Previous Projects">
-            <i class="ri-arrow-left-s-line"></i>
-          </button>
-          <div class="carousel-indicators" id="carousel-indicators">
-            <span class="carousel-dot active" data-index="0"></span>
-            <span class="carousel-dot" data-index="1"></span>
-          </div>
-          <button class="carousel-nav-btn" id="carousel-next-btn" aria-label="Next Projects">
-            <i class="ri-arrow-right-s-line"></i>
-          </button>
-        </div>
+      <div class="section-header-compact">
+        <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
+        <span class="section-subtitle" data-i18n="projects_subtitle">Click on any project to read the full case study</span>
       </div>
 
-      <div class="projects-carousel-container">
+      <div class="projects-carousel-wrapper">
+        <!-- Seta Lateral Esquerda -->
+        <button class="carousel-side-btn prev-btn" id="carousel-prev-btn" aria-label="Previous Projects">
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+
         <div class="projects-carousel-track" id="projects-track">
 
         <!-- Projeto 1: Real Estate Scraper -->
@@ -423,9 +412,19 @@
             </div>
           </div>
         </div>
+
+        <!-- Seta Lateral Direita -->
+        <button class="carousel-side-btn next-btn" id="carousel-next-btn" aria-label="Next Projects">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
       </div>
-    </div>
-  </section>
+
+      <!-- Indicadores de Posição do Carrossel -->
+      <div class="carousel-dots-bottom" id="carousel-indicators">
+        <span class="carousel-dot active" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+      </div>
+    </section>
 
     <!-- ================= BOTTOM SECTION: EXPERIENCE & SKILLS/LANGUAGES ================= -->
     <section class="bottom-section">
