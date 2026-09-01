@@ -87,9 +87,9 @@ const translations = {
     wp_role_val: "Frontend & Design",
     wp_type_val: "Personal Website",
     wp_status_val: "Finished",
-    wp_origin_title: "Origin & Design Philosophy",
-    wp_origin_p1: "I developed this portfolio to build an authentic, minimalist, and high-performance digital presence. Instead of relying on heavy frameworks with unnecessary hydration overhead for static content, I chose to build a handcrafted experience in vanilla HTML5, CSS3, and JavaScript.",
-    wp_origin_p2: "The art direction pairs the elegance of classic editorial publications with the precision of software engineering: high-contrast serif typography for headings, a warm neutral color palette, and interactive components inspired by mini browser windows and developer terminals.",
+    wp_origin_title: "Project Origin",
+    wp_origin_p1: "As the number of projects grew, I decided to build a dedicated place to catalog them. Beyond acting as a 'personal vault', this portfolio serves to gather and detail my professional experiences, since the amount of information that can fit on a traditional resume is extremely limited.",
+    wp_origin_p2: "The design was inspired by peer portfolios, focusing on a lighter, cleaner, and minimalist aesthetic. I used tools like Figma and Adobe Color to decide the final design and color harmony, alongside modern libraries for icons and typography.",
     wp_arch_title: "Architecture & Frontend Highlights",
     wp_arch_f1_title: "Native Client-Side i18n System:",
     wp_arch_f1_desc: " Instant internationalization mechanism without page reloads, mapping data-i18n attributes and persisting user preferences in localStorage.",
@@ -98,15 +98,8 @@ const translations = {
     wp_arch_f3_title: "Responsive Layout & Accessibility:",
     wp_arch_f3_desc: " Semantic markup combined with modern Flexbox and CSS Grid, delivering flawless rendering from ultrawide monitors down to compact mobile screens.",
     wp_tech_title: "Technologies Used",
-    wp_challenges_title: "Engineering Challenges",
-    wp_ch1_title: "Preventing Cumulative Layout Shift (CLS):",
-    wp_ch1_desc: " Ensuring dynamic switching between varying word lengths in English and Portuguese does not cause jarring jumps or break grid alignment.",
-    wp_ch2_title: "Modularity without Bundlers:",
-    wp_ch2_desc: " Keeping stylesheets and JavaScript cleanly structured and maintainable across files without requiring bundlers like Webpack or Vite for builds.",
-    wp_ch3_title: "Micro-Interactions & Performance:",
-    wp_ch3_desc: " Crafting tactile hover animations across cards, buttons, and badges while preserving top-tier performance scores and instant load times.",
     wp_learn_title: "Learnings & Decisions",
-    wp_badge_design: "Editorial UI/UX Design",
+    wp_badge_design: "UI/UX Design Editorial",
     wp_badge_i18n: "Client-Side i18n",
     wp_badge_css: "CSS Architecture",
     wp_learn_item1: "Building a cohesive design system with CSS custom properties for editorial typography, neutral palettes, and harmonic spacing.",
@@ -199,9 +192,9 @@ const translations = {
     wp_role_val: "Frontend & Design",
     wp_type_val: "Website Pessoal",
     wp_status_val: "Pronto",
-    wp_origin_title: "Origem & Filosofia do Design",
-    wp_origin_p1: "Desenvolvi este portfólio com o objetivo de criar uma presença digital autêntica, minimalista e de alta performance. Em vez de recorrer a frameworks pesados com sobrecarga de renderização para páginas estáticas, optei por construir uma experiência puramente artesanal em HTML5, CSS3 e JavaScript Vanilla.",
-    wp_origin_p2: "A direção de arte combina a elegância de publicações editoriais com a precisão da engenharia de software: tipografia serifada de alto contraste nos títulos, paleta de tons neutros aconchegantes e componentes interativos inspirados em mini-navegadores e terminais de desenvolvimento.",
+    wp_origin_title: "Origem do Projeto",
+    wp_origin_p1: "Com o aumento do número de projetos, decidi criar um espaço próprio para catalogá-los. Além de funcionar como um 'cofre pessoal', este portfólio tem o papel de reunir e detalhar minhas experiências profissionais, já que a quantidade de informação possível de colocar em um currículo tradicional é extremamente limitada.",
+    wp_origin_p2: "O design foi inspirado em portfólios de outros desenvolvedores, priorizando uma linha mais leve, clara e minimalista. Utilizei ferramentas como Figma e Adobe Color para definir a harmonia e paleta de cores final, além de bibliotecas modernas para ícones e tipografia.",
     wp_arch_title: "Arquitetura & Destaques Frontend",
     wp_arch_f1_title: "Sistema i18n Nativo Client-Side:",
     wp_arch_f1_desc: " Mecanismo de internacionalização instantâneo sem recarregamento de página, operando via mapeamento de chaves data-i18n e persistência da preferência do usuário no localStorage.",
@@ -210,13 +203,6 @@ const translations = {
     wp_arch_f3_title: "Layout Responsivo & Acessibilidade:",
     wp_arch_f3_desc: " Estrutura semântica com Flexbox e CSS Grid moderno, proporcionando visualização impecável desde telas ultrawide até dispositivos móveis compactos.",
     wp_tech_title: "Tecnologias Utilizadas",
-    wp_challenges_title: "Desafios de Engenharia",
-    wp_ch1_title: "Prevenção de Layout Shift (CLS):",
-    wp_ch1_desc: " Garantir que a alternância entre textos de diferentes comprimentos em inglês e português não cause saltos indesejados ou quebras de alinhamento no grid.",
-    wp_ch2_title: "Modularidade sem Bundlers:",
-    wp_ch2_desc: " Manter estilos e lógica organizados e escaláveis em múltiplos arquivos sem depender de bundlers pesados como Webpack ou Vite para o build.",
-    wp_ch3_title: "Micro-interações e Performance:",
-    wp_ch3_desc: " Desenvolver animações sutis de hover nos cards, botões e tags preservando pontuação máxima de performance e tempos de carregamento instantâneos.",
     wp_learn_title: "Aprendizado & Decisões",
     wp_badge_design: "UI/UX Design Editorial",
     wp_badge_i18n: "i18n Client-Side",
@@ -308,6 +294,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Inicializacao do sistema
+  // 4. Carrossel de Projetos
+  const track = document.getElementById('projects-track');
+  const prevBtn = document.getElementById('carousel-prev-btn');
+  const nextBtn = document.getElementById('carousel-next-btn');
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  if (track && prevBtn && nextBtn) {
+    function getScrollStep() {
+      const card = track.querySelector('.project-card');
+      if (!card) return 320;
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.gap) || 20;
+      return card.offsetWidth + gap;
+    }
+
+    function updateCarouselState() {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (maxScroll <= 5) {
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        return;
+      }
+
+      prevBtn.disabled = track.scrollLeft <= 5;
+      nextBtn.disabled = track.scrollLeft >= maxScroll - 5;
+
+      if (dots.length > 0) {
+        const scrollFraction = track.scrollLeft / maxScroll;
+        const activeIdx = Math.min(Math.round(scrollFraction * (dots.length - 1)), dots.length - 1);
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activeIdx);
+        });
+      }
+    }
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10) || 0;
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const targetScroll = (maxScroll / (dots.length - 1)) * idx;
+        track.scrollTo({ left: targetScroll, behavior: 'smooth' });
+      });
+    });
+
+    track.addEventListener('scroll', updateCarouselState, { passive: true });
+    window.addEventListener('resize', updateCarouselState, { passive: true });
+
+    // Estado inicial
+    updateCarouselState();
+  }
+
+  // 5. Inicializacao do sistema
   console.log('Portfolio initialized successfully. Language: ' + currentLang);
 });

@@ -382,16 +382,106 @@ button {
 .token-economy-icon { color: #eab308; }
 
 /* ==========================================================================
-   3. PROJETOS SECTION (MOCKUP CARDS GRID)
+   3. PROJETOS SECTION (CAROUSEL & MOCKUP CARDS)
    ========================================================================== */
 .projects-section {
   width: 100%;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.section-header-with-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.15rem;
+  gap: 1rem;
+}
+
+.header-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.carousel-nav-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-title);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.carousel-nav-btn:hover:not(:disabled) {
+  background-color: var(--accent-light);
+  border-color: var(--accent-border);
+  color: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.carousel-indicators {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0.4rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border-strong);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: var(--accent-dark);
+  width: 18px;
+  border-radius: 4px;
+}
+
+/* Container e Track do Carrossel */
+.projects-carousel-container {
+  width: 100%;
+  position: relative;
+}
+
+.projects-carousel-track {
+  display: flex;
   gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.35rem 0.2rem 1rem 0.2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects-carousel-track::-webkit-scrollbar {
+  display: none;
 }
 
 .badge-soon {
@@ -411,6 +501,9 @@ button {
 }
 
 .project-card {
+  flex: 0 0 calc((100% - 2 * 1.25rem) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
@@ -1395,8 +1488,8 @@ button {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .projects-carousel-track .project-card {
+    flex: 0 0 calc((100% - 1.25rem) / 2);
   }
 
   .bottom-section {
@@ -1426,6 +1519,15 @@ button {
     display: block;
   }
 
+  .section-header-with-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carousel-controls {
+    align-self: flex-end;
+  }
+
   .profile-header {
     flex-direction: column;
     align-items: center;
@@ -1444,8 +1546,8 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projects-carousel-track .project-card {
+    flex: 0 0 100%;
   }
 
   .project-meta-grid {
