@@ -390,8 +390,24 @@ button {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
+}
+
+.badge-soon {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  background-color: var(--accent-light);
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+}
+
+.project-card-soon {
+  cursor: default;
 }
 
 .project-card {
@@ -571,6 +587,70 @@ button {
 .code-line.kw { color: #d97706; font-weight: 600; }
 .code-line.fn { color: #2563eb; }
 .code-line.indent { padding-left: 0.8rem; color: #475569; }
+
+.screen-stories {
+  background: linear-gradient(135deg, #fdfbf7 0%, #f5eee6 100%);
+  border-radius: 4px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid #e7dfd5;
+}
+
+.story-pill-row {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.story-lang-chip {
+  font-size: 0.58rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  background-color: #e5ddd0;
+  color: #78350f;
+}
+
+.story-lang-chip.active {
+  background-color: #92400e;
+  color: #ffffff;
+}
+
+.story-chat-box {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #e7dfd5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.story-chat-line {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #292524;
+}
+
+.story-audio-bar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 10px;
+}
+
+.audio-wave {
+  width: 3px;
+  height: 4px;
+  background-color: #b45309;
+  border-radius: 2px;
+}
+
+.audio-wave.high { height: 10px; }
+.audio-wave.mid { height: 7px; }
 
 /* Header compacto da seção */
 .section-header-compact {
